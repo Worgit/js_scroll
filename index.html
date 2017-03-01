@@ -9,10 +9,11 @@
 			font-size:50px;
 			text-align: center;
 			margin-top:20%;
+			
 		}
 
 		#magic{
-			color: #777;
+			color: /*#777*/steelblue;
 			border-right: 1px solid #777;
 			padding-right: 7px;
 			display: inline;
@@ -25,7 +26,8 @@
 
 	<script>
 
-		var words = ["fun", "exciting", "about not giving up", "being helpful", "being open", "what I learned at CodingDojo!"],
+		var words = ["fun", "exciting", "about\xa0not\xa0giving\xa0up", "being\xa0helpful", "being\xa0open", 
+		"working\xa0together", "about\xa0learning\xa0new\xa0things", "what\xa0I\xa0learned\xa0at\xa0CodingDojo!"],
 			el = document.getElementById('magic'),
 			word_counter = 0,
 			character_counter = 0;
@@ -34,7 +36,7 @@
 		{
 			el.innerHTML = el.innerHTML+words[word_counter][character_counter++];
 
-			if(character_counter == words[word_counter].length)
+			if(character_counter == words[word_counter].length + 1)
 			{
 				word_counter++; 	//choose a different word
 				character_counter = 0;	//start over with the first character of the word
